@@ -4,9 +4,10 @@
 ## Write a short comment describing this function
 
 # Function to create a special type of matrix, a cacheable matrix
+
 makeCacheMatrix <- function(x = matrix()) {
         inverse <- NULL                                   # This variable will hold the inverse matrix, but for now is being set to null,
-        # since the inverse of the matrix as not been calculated yet
+                                                          # since the inverse of the matrix as not been calculated yet
         
         set <- function(y) {                              # This function set the value of vector
                 x <<- y                                   # update the old matrix to the new matrix
@@ -30,7 +31,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # of the inverse of the matrix in the cache via the setinverse function.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+       ## Return a matrix that is the inverse of 'x'
         inverse <- x$getinverse()                     # holds the inverse of the matrix
         if(!is.null(inverse)) {                       # check if this inverse of the matrix has been calculated
                 message("getting cached data")        # if so, prints this message "getting cached data" and
